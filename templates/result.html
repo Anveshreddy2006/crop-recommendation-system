@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',
+          filename='style.css') }}"
+    />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Recommended Crop</h1>
+
+      <h2>{{ crop }}</h2>
+
+      <a href="/">Predict Again</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Crop Recommendation</title>
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="{{ url_for('static', filename='crop.png') }}"
+        alt="Crop"
+        class="crop-image"
+      />
+      <h1>Crop Recommendation System</h1>
+
+      <form action="/predict" method="post">
+        <input
+          type="number"
+          step="any"
+          name="N"
+          placeholder="Nitrogen"
+          required
+        />
+
+        <input
+          type="number"
+          step="any"
+          name="P"
+          placeholder="Phosphorus"
+          required
+        />
+
+        <input
+          type="number"
+          step="any"
+          name="K"
+          placeholder="Potassium"
+          required
+        />
+
+        <input
+          type="number"
+          step="any"
+          name="temperature"
+          placeholder="Temperature"
+          required
+        />
+
+        <input
+          type="number"
+          step="any"
+          name="humidity"
+          placeholder="Humidity"
+          required
+        />
+
+        <input
+          type="number"
+          step="any"
+          name="ph"
+          placeholder="pH Value"
+          required
+        />
+
+        <input
+          type="number"
+          step="any"
+          name="rainfall"
+          placeholder="Rainfall"
+          required
+        />
+
+        <button type="submit">Predict Crop</button>
+      </form>
+    </div>
+  </body>
+</html>
